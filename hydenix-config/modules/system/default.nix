@@ -43,7 +43,13 @@
     tty-clock
     clock-rs
     tree-sitter
+    dotnet-sdk
+    omnisharp-roslyn
   ];
+
+  environment.sessionVariables = {
+    DOTNET_ROOT = "${pkgs.dotnet-sdk_8}/share/dotnet";
+  };
 
   systemd.services.warp-svc = {
     enable = true;

@@ -13,4 +13,12 @@
     mutable = true;
     force = true;
   };
+
+  home.file.".config/fastfetch/config.jsonc" = lib.mkForce {
+    source = ./../../files/config.jsonc;
+    executable = true;
+    force = true;
+  };
+
+  # hydenix.hm.shell.fastfetch.enable = false;
 }
