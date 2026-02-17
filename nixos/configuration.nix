@@ -76,8 +76,6 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
-      os-prober
-      neovim 
       tree
     ];
   };
@@ -90,10 +88,11 @@
     # vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     wget
     os-prober
-    neovim 
+    neovim
     tree
     wpa_supplicant
     dhcpcd
+    git
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
